@@ -1,5 +1,6 @@
 import requests
 import re
+import time
 from bs4 import BeautifulSoup
 
 import config
@@ -47,7 +48,7 @@ class PrimeNowChecker:
         self.check_products(response)
 
         if len(available_windows) > 0:
-            message = f'¡Available windows on {self.merchant.get("name")}!\n\nAvailable windows:\n\n' + '\n'.join(available_windows)
+            message = f'¡Available windows on {self.merchant.get("name")}!:\n\n' + '\n'.join(available_windows)
 
             self.notify(message)
 
@@ -57,7 +58,7 @@ class PrimeNowChecker:
         else:
             self.reset_errors()
 
-            print(f'Not available windows on {self.merchant.get("name")}')
+            print(f'Not available windows on {self.merchant.get("name")} at {time.strftime("%X")}')
 
         return False
 
