@@ -16,7 +16,7 @@ Bot to check if there are available windows on amazon prime now.
         - `TELEGRAM_BOT_TOKEN`: Telegram bot token (view telegram instructions)
         - `TELEGRAM_BOT_ID`: Telegram bot id (view telegram instructions)
     
-    - Cookies vars: until login will be developed, you must provide these cookie values (you cant get it making a request and inspect it on chrome network tab):
+    - Cookies vars: until login will be developed, you must provide these cookie values (you can get it making a request and inspect it on chrome network tab):
         - `COOKIE_UBID`
         - `COOKIE_X_ACBES`
         - `COOKIE_AT_ACBES`
