@@ -21,7 +21,7 @@ class PrimeNowChecker:
         self.merchant = merchant
 
     def check(self):
-        print(f'Checking {self.merchant.get("name")}...')
+        print(f'> Checking {self.merchant.get("name")}...')
 
         url = self.PATHS['url'] + self.PATHS['checkout'] + self.merchant['id']
 
@@ -58,7 +58,7 @@ class PrimeNowChecker:
         else:
             self.reset_errors()
 
-            print(f'Not available windows on {self.merchant.get("name")} at {time.strftime("%X")}')
+            print(f'    - Not available windows at {time.strftime("%X")}')
 
         return False
 
